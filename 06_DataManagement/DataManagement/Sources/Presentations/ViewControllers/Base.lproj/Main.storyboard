@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="DataManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhY-nY-L7v">
+                                <rect key="frame" x="270" y="285" width="60" height="30"/>
+                                <state key="normal" title="登録する"/>
+                                <connections>
+                                    <action selector="doTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J1t-60-gXj"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="お名前" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rOC-dh-OP2">
+                                <rect key="frame" x="11" y="235" width="578" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JhY-nY-L7v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I43-Ly-xci"/>
+                            <constraint firstAttribute="trailing" secondItem="rOC-dh-OP2" secondAttribute="trailing" constant="11" id="RrK-kh-i32"/>
+                            <constraint firstItem="JhY-nY-L7v" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="W6J-C3-iNY"/>
+                            <constraint firstItem="JhY-nY-L7v" firstAttribute="top" secondItem="rOC-dh-OP2" secondAttribute="bottom" constant="20" id="Wcu-5Z-dx6"/>
+                            <constraint firstItem="rOC-dh-OP2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="11" id="pde-Nj-lwq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="rOC-dh-OP2" id="wHQ-3T-dZR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="594" y="480"/>
+        </scene>
+        <!--Withdrawal View Controller-->
+        <scene sceneID="4an-IV-TT7">
+            <objects>
+                <viewController storyboardIdentifier="WithdrawalViewController" id="zPr-mM-pVq" customClass="WithdrawalViewController" customModule="DataManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="awP-5i-q9q"/>
+                        <viewControllerLayoutGuide type="bottom" id="5nM-ce-W07"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BM0-nc-Gu4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="おかえりなさい。%@さん" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7Y-U3-DB3">
+                                <rect key="frame" x="11" y="290" width="578" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pzg-5t-9dM">
+                                <rect key="frame" x="270" y="331" width="60" height="30"/>
+                                <state key="normal" title="退会する"/>
+                                <connections>
+                                    <action selector="doTapButton:" destination="zPr-mM-pVq" eventType="touchUpInside" id="X1W-TC-mZK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="N7Y-U3-DB3" firstAttribute="centerY" secondItem="BM0-nc-Gu4" secondAttribute="centerY" id="06h-Nl-yzw"/>
+                            <constraint firstItem="N7Y-U3-DB3" firstAttribute="leading" secondItem="BM0-nc-Gu4" secondAttribute="leading" constant="11" id="5Sl-30-73V"/>
+                            <constraint firstItem="Pzg-5t-9dM" firstAttribute="top" secondItem="N7Y-U3-DB3" secondAttribute="bottom" constant="20" id="AMX-h3-rQG"/>
+                            <constraint firstAttribute="trailing" secondItem="N7Y-U3-DB3" secondAttribute="trailing" constant="11" id="OLX-P0-h56"/>
+                            <constraint firstItem="Pzg-5t-9dM" firstAttribute="centerX" secondItem="BM0-nc-Gu4" secondAttribute="centerX" id="r2W-X8-Y7d"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="N7Y-U3-DB3" id="aqU-8w-RhL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="59O-tG-gQF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1261" y="480"/>
+        </scene>
+    </scenes>
+</document>

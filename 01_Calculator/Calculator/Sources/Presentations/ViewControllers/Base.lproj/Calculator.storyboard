@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Calculator View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTV-ha-QZI">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="171"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="45" translatesAutoresizingMaskIntoConstraints="NO" id="e5L-G8-KyT" customClass="CalculatorLabel" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="39" width="560" height="132"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="110"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact">
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="70"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="e5L-G8-KyT" secondAttribute="trailing" constant="20" id="AB0-44-iAh"/>
+                                    <constraint firstAttribute="bottom" secondItem="e5L-G8-KyT" secondAttribute="bottom" id="RzH-TR-3AV"/>
+                                    <constraint firstItem="e5L-G8-KyT" firstAttribute="leading" secondItem="aTV-ha-QZI" secondAttribute="leading" constant="20" id="hjL-Gc-2gf"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7lc-1T-sXi">
+                                <rect key="frame" x="0.0" y="171" width="600" height="86"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5b-Fg-yAO" customClass="DarkHighlightedButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="450" y="0.0" width="150" height="86"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="52"/>
+                                        <state key="normal" title="÷">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doTapDivision:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A52-SP-gDq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfu-ZV-tlS" customClass="DarkHighlightedButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="150" y="0.0" width="150" height="86"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                        <state key="normal" title="+/-">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doTapReserve:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dhJ-rg-7KN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBK-Bc-wyV" customClass="DarkHighlightedButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="86"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                        <state key="normal" title="AC">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doTapClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0N6-HT-wPB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdd-cd-aBI" customClass="DarkHighlightedButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="300" y="0.0" width="150" height="86"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                        <state key="normal" title="%">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doTapReduce:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bmx-HW-xIv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="D5b-Fg-yAO" firstAttribute="top" secondItem="7lc-1T-sXi" secondAttribute="top" id="80J-cC-FzP"/>
+                                    <constraint firstAttribute="bottom" secondItem="hdd-cd-aBI" secondAttribute="bottom" id="BR4-P2-yfi"/>
+                                    <constraint firstItem="hdd-cd-aBI" firstAttribute="leading" secondItem="vfu-ZV-tlS" secondAttribute="trailing" id="C4B-fj-EjT"/>
+                                    <constraint firstAttribute="bottom" secondItem="D5b-Fg-yAO" secondAttribute="bottom" id="FRV-LF-5Ti"/>
+                                    <constraint firstItem="D5b-Fg-yAO" firstAttribute="width" secondItem="xBK-Bc-wyV" secondAttribute="width" id="HEY-65-nuU"/>
+                                    <constraint firstItem="vfu-ZV-tlS" firstAttribute="leading" secondItem="xBK-Bc-wyV" secondAttribute="trailing" id="KJ7-mL-2CB"/>
+                                    <constraint firstItem="D5b-Fg-yAO" firstAttribute="leading" secondItem="hdd-cd-aBI" secondAttribute="trailing" id="MTk-jn-Dot"/>
+                                    <constraint firstAttribute="bottom" secondItem="xBK-Bc-wyV" secondAttribute="bottom" id="Xlr-Sa-IfJ"/>
+                                    <constraint firstItem="D5b-Fg-yAO" firstAttribute="leading" secondItem="hdd-cd-aBI" secondAttribute="trailing" id="bcd-BR-huC"/>
+                                    <constraint firstItem="hdd-cd-aBI" firstAttribute="leading" secondItem="vfu-ZV-tlS" secondAttribute="trailing" id="gJl-M7-oph"/>
+                                    <constraint firstItem="xBK-Bc-wyV" firstAttribute="top" secondItem="7lc-1T-sXi" secondAttribute="top" id="hUv-xF-w5f"/>
+                                    <constraint firstAttribute="trailing" secondItem="D5b-Fg-yAO" secondAttribute="trailing" id="ic7-QF-t9j"/>
+                                    <constraint firstItem="xBK-Bc-wyV" firstAttribute="leading" secondItem="7lc-1T-sXi" secondAttribute="leading" id="okx-yY-asQ"/>
+                                    <constraint firstItem="vfu-ZV-tlS" firstAttribute="top" secondItem="7lc-1T-sXi" secondAttribute="top" id="p1O-K0-ugF"/>
+                                    <constraint firstItem="hdd-cd-aBI" firstAttribute="width" secondItem="xBK-Bc-wyV" secondAttribute="width" id="pKs-uZ-4SN"/>
+                                    <constraint firstItem="vfu-ZV-tlS" firstAttribute="leading" secondItem="xBK-Bc-wyV" secondAttribute="trailing" id="r2j-em-eyv"/>
+                                    <constraint firstAttribute="bottom" secondItem="vfu-ZV-tlS" secondAttribute="bottom" id="szc-mV-nXW"/>
+                                    <constraint firstItem="hdd-cd-aBI" firstAttribute="top" secondItem="7lc-1T-sXi" secondAttribute="top" id="xde-6H-Hjm"/>
+                                    <constraint firstItem="vfu-ZV-tlS" firstAttribute="width" secondItem="xBK-Bc-wyV" secondAttribute="width" id="zNi-wf-IyM"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fdd-wY-PMl">
+                                <rect key="frame" x="0.0" y="514" width="600" height="86"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56R-V2-qyq" customClass="DarkHighlightedButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="300" y="0.0" width="150" height="86"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                        <state key="normal" title=".">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doTapDecimal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oa1-5e-a5Y"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MkM-oJ-HKj" customClass="DarkHighlightedButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="86"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doTap0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f5S-UD-qnO"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xz2-Nh-tg7">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="86"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1R-kR-5El" customClass="DarkHighlightedButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="450" y="0.0" width="150" height="86"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="52"/>
+                                        <state key="normal" title="=">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doTapResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y3N-xd-HhL"/>
+                                        </connections>
+                                    </button>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3WY-ZF-TUX">
+                                        <rect key="frame" x="150" y="0.0" width="150" height="86"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="56R-V2-qyq" firstAttribute="width" secondItem="MkM-oJ-HKj" secondAttribute="width" multiplier="0.5" id="0Ai-gS-6kV"/>
+                                    <constraint firstItem="H1R-kR-5El" firstAttribute="leading" secondItem="56R-V2-qyq" secondAttribute="trailing" id="8O3-aB-Uju"/>
+                                    <constraint firstItem="MkM-oJ-HKj" firstAttribute="top" secondItem="Fdd-wY-PMl" secondAttribute="top" id="9Uv-L0-ygs"/>
+                                    <constraint firstItem="3WY-ZF-TUX" firstAttribute="leading" secondItem="xz2-Nh-tg7" secondAttribute="trailing" id="CZY-Ej-BfK"/>
+                                    <constraint firstAttribute="bottom" secondItem="MkM-oJ-HKj" secondAttribute="bottom" id="Dni-LF-UYS"/>
+                                    <constraint firstAttribute="bottom" secondItem="3WY-ZF-TUX" secondAttribute="bottom" id="E47-Zf-1Zg"/>
+                                    <constraint firstItem="xz2-Nh-tg7" firstAttribute="leading" secondItem="Fdd-wY-PMl" secondAttribute="leading" id="Hh8-I5-tCY"/>
+                                    <constraint firstItem="H1R-kR-5El" firstAttribute="top" secondItem="Fdd-wY-PMl" secondAttribute="top" id="QFE-DM-6MY"/>
+                                    <constraint firstItem="H1R-kR-5El" firstAttribute="width" secondItem="MkM-oJ-HKj" secondAttribute="width" multiplier="0.5" id="Syw-qg-2f0"/>
+                                    <constraint firstItem="56R-V2-qyq" firstAttribute="leading" secondItem="MkM-oJ-HKj" secondAttribute="trailing" id="VZI-ve-dZF"/>
+                                    <constraint firstAttribute="bottom" secondItem="56R-V2-qyq" secondAttribute="bottom" id="X3o-oZ-DOZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="H1R-kR-5El" secondAttribute="bottom" id="Yja-Re-oEN"/>
+                                    <constraint firstAttribute="bottom" secondItem="xz2-Nh-tg7" secondAttribute="bottom" id="ZBP-fy-8ab"/>
+                                    <constraint firstAttribute="trailing" secondItem="H1R-kR-5El" secondAttribute="trailing" id="ZO4-uI-B1X"/>
+                                    <constraint firstItem="MkM-oJ-HKj" firstAttribute="leading" secondItem="Fdd-wY-PMl" secondAttribute="leading" id="auQ-Re-l7d"/>
+                                    <constraint firstItem="H1R-kR-5El" firstAttribute="leading" secondItem="56R-V2-qyq" secondAttribute="trailing" id="ccM-wR-UHh"/>
+                                    <constraint firstItem="3WY-ZF-TUX" firstAttribute="leading" secondItem="xz2-Nh-tg7" secondAttribute="trailing" id="f27-Dx-laK"/>
+                                    <constraint firstItem="3WY-ZF-TUX" firstAttribute="width" secondItem="xz2-Nh-tg7" secondAttribute="width" id="kaA-RF-suH"/>
+                                    <constraint firstItem="56R-V2-qyq" firstAttribute="leading" secondItem="3WY-ZF-TUX" secondAttribute="trailing" id="q6p-Hf-gzW"/>
+                                    <constraint firstItem="56R-V2-qyq" firstAttribute="leading" secondItem="MkM-oJ-HKj" secondAttribute="trailing" id="qHo-Fs-arK"/>
+                                    <constraint firstItem="xz2-Nh-tg7" firstAttribute="top" secondItem="Fdd-wY-PMl" secondAttribute="top" id="ueL-Ub-yec"/>
+                                    <constraint firstItem="3WY-ZF-TUX" firstAttribute="top" secondItem="Fdd-wY-PMl" secondAttribute="top" id="xyI-tp-5Dh"/>
+                                    <constraint firstItem="56R-V2-qyq" firstAttribute="top" secondItem="Fdd-wY-PMl" secondAttribute="top" id="yun-Tv-AHM"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jxD-DN-lSh">
+                                <rect key="frame" x="0.0" y="343" width="600" height="85"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0F-rD-P5G" customClass="DarkHighlightedButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="85"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                        <state key="normal" title="4">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doTap4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="daO-wP-Jea"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ug-OU-ocK" customClass="DarkHighlightedButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="150" y="0.0" width="150" height="85"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                        <state key="normal" title="5">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doTap5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eyS-nb-rc4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOi-1L-4yT" customClass="DarkHighlightedButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="300" y="0.0" width="150" height="85"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                        <state key="normal" title="6">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doTap6:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uso-hU-C6d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqQ-f3-Uda" customClass="DarkHighlightedButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="450" y="0.0" width="150" height="85"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="52"/>
+                                        <state key="normal" title="-">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doTapSubtraction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pfe-KJ-DIg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="QqQ-f3-Uda" secondAttribute="bottom" id="3Gs-qU-NND"/>
+                                    <constraint firstItem="QqQ-f3-Uda" firstAttribute="width" secondItem="S0F-rD-P5G" secondAttribute="width" id="4Hr-DC-I39"/>
+                                    <constraint firstItem="S0F-rD-P5G" firstAttribute="leading" secondItem="jxD-DN-lSh" secondAttribute="leading" id="8Wz-RT-gGe"/>
+                                    <constraint firstItem="QqQ-f3-Uda" firstAttribute="top" secondItem="jxD-DN-lSh" secondAttribute="top" id="8Wz-hw-70x"/>
+                                    <constraint firstItem="0Ug-OU-ocK" firstAttribute="leading" secondItem="S0F-rD-P5G" secondAttribute="trailing" id="8ZF-Ej-6SV"/>
+                                    <constraint firstItem="0Ug-OU-ocK" firstAttribute="top" secondItem="jxD-DN-lSh" secondAttribute="top" id="Fjf-Mk-vxM"/>
+                                    <constraint firstAttribute="bottom" secondItem="xOi-1L-4yT" secondAttribute="bottom" id="Fnl-uZ-WFv"/>
+                                    <constraint firstAttribute="bottom" secondItem="0Ug-OU-ocK" secondAttribute="bottom" id="IPa-YC-Gyy"/>
+                                    <constraint firstItem="0Ug-OU-ocK" firstAttribute="leading" secondItem="S0F-rD-P5G" secondAttribute="trailing" id="J1z-3m-es0"/>
+                                    <constraint firstItem="QqQ-f3-Uda" firstAttribute="leading" secondItem="xOi-1L-4yT" secondAttribute="trailing" id="JFo-lU-zYd"/>
+                                    <constraint firstAttribute="bottom" secondItem="S0F-rD-P5G" secondAttribute="bottom" id="Msg-Xf-04U"/>
+                                    <constraint firstItem="xOi-1L-4yT" firstAttribute="leading" secondItem="0Ug-OU-ocK" secondAttribute="trailing" id="Stg-Qb-9Hi"/>
+                                    <constraint firstItem="xOi-1L-4yT" firstAttribute="top" secondItem="jxD-DN-lSh" secondAttribute="top" id="TCb-qa-DKN"/>
+                                    <constraint firstAttribute="trailing" secondItem="QqQ-f3-Uda" secondAttribute="trailing" id="gMQ-MQ-qas"/>
+                                    <constraint firstItem="QqQ-f3-Uda" firstAttribute="leading" secondItem="xOi-1L-4yT" secondAttribute="trailing" id="tri-P6-HE3"/>
+                                    <constraint firstItem="xOi-1L-4yT" firstAttribute="leading" secondItem="0Ug-OU-ocK" secondAttribute="trailing" id="twO-5r-xZS"/>
+                                    <constraint firstItem="S0F-rD-P5G" firstAttribute="top" secondItem="jxD-DN-lSh" secondAttribute="top" id="umb-ah-iZC"/>
+                                    <constraint firstItem="xOi-1L-4yT" firstAttribute="width" secondItem="S0F-rD-P5G" secondAttribute="width" id="xe8-Oi-jyS"/>
+                                    <constraint firstItem="0Ug-OU-ocK" firstAttribute="width" secondItem="S0F-rD-P5G" secondAttribute="width" id="zVE-hP-7m4"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ABn-h0-6ya">
+                                <rect key="frame" x="0.0" y="257" width="600" height="86"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5R3-Hl-C21" customClass="DarkHighlightedButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="300" y="0.0" width="150" height="86"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                        <state key="normal" title="9">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doTap9:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zoX-pL-FiW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDh-CX-IaH" customClass="DarkHighlightedButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="150" y="0.0" width="150" height="86"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                        <state key="normal" title="8">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doTap8:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KmD-qM-of0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cB-Cb-VFx" customClass="DarkHighlightedButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="450" y="0.0" width="150" height="86"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="52"/>
+                                        <state key="normal" title="×">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doTapMultiplication:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P9h-vT-3HK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayq-Mp-blH" customClass="DarkHighlightedButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="86"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                        <state key="normal" title="7">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doTap7:" destination="BYZ-38-t0r" eventType="touchUpInside" id="08w-kp-hZP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5R3-Hl-C21" firstAttribute="top" secondItem="ABn-h0-6ya" secondAttribute="top" id="0e7-QM-PwX"/>
+                                    <constraint firstItem="lDh-CX-IaH" firstAttribute="leading" secondItem="ayq-Mp-blH" secondAttribute="trailing" id="4Bl-GS-xeQ"/>
+                                    <constraint firstItem="ayq-Mp-blH" firstAttribute="top" secondItem="ABn-h0-6ya" secondAttribute="top" id="4zR-pz-7Ep"/>
+                                    <constraint firstItem="8cB-Cb-VFx" firstAttribute="width" secondItem="ayq-Mp-blH" secondAttribute="width" id="5rv-fM-JQG"/>
+                                    <constraint firstItem="5R3-Hl-C21" firstAttribute="width" secondItem="ayq-Mp-blH" secondAttribute="width" id="9Oo-P6-GAF"/>
+                                    <constraint firstAttribute="bottom" secondItem="ayq-Mp-blH" secondAttribute="bottom" id="Bm7-yZ-6T7"/>
+                                    <constraint firstItem="8cB-Cb-VFx" firstAttribute="leading" secondItem="5R3-Hl-C21" secondAttribute="trailing" id="CfT-jd-7gi"/>
+                                    <constraint firstAttribute="trailing" secondItem="8cB-Cb-VFx" secondAttribute="trailing" id="JRS-I9-3LF"/>
+                                    <constraint firstItem="lDh-CX-IaH" firstAttribute="leading" secondItem="ayq-Mp-blH" secondAttribute="trailing" id="Jmq-mM-YL1"/>
+                                    <constraint firstItem="8cB-Cb-VFx" firstAttribute="leading" secondItem="5R3-Hl-C21" secondAttribute="trailing" id="N34-Yu-KGa"/>
+                                    <constraint firstAttribute="bottom" secondItem="8cB-Cb-VFx" secondAttribute="bottom" id="NHk-bk-d7C"/>
+                                    <constraint firstAttribute="bottom" secondItem="lDh-CX-IaH" secondAttribute="bottom" id="PLL-aw-bMQ"/>
+                                    <constraint firstItem="ayq-Mp-blH" firstAttribute="leading" secondItem="ABn-h0-6ya" secondAttribute="leading" id="Sbj-sg-Ybe"/>
+                                    <constraint firstItem="5R3-Hl-C21" firstAttribute="leading" secondItem="lDh-CX-IaH" secondAttribute="trailing" id="ZA7-YC-qO6"/>
+                                    <constraint firstItem="5R3-Hl-C21" firstAttribute="leading" secondItem="lDh-CX-IaH" secondAttribute="trailing" id="aRe-ZU-ngm"/>
+                                    <constraint firstItem="lDh-CX-IaH" firstAttribute="width" secondItem="ayq-Mp-blH" secondAttribute="width" id="bsz-bR-adE"/>
+                                    <constraint firstItem="8cB-Cb-VFx" firstAttribute="top" secondItem="ABn-h0-6ya" secondAttribute="top" id="fbJ-D4-l08"/>
+                                    <constraint firstItem="lDh-CX-IaH" firstAttribute="top" secondItem="ABn-h0-6ya" secondAttribute="top" id="fwd-sh-0OU"/>
+                                    <constraint firstAttribute="bottom" secondItem="5R3-Hl-C21" secondAttribute="bottom" id="xnQ-S0-kE0"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGU-T1-4jJ">
+                                <rect key="frame" x="0.0" y="428" width="600" height="86"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvu-Fe-5ce" customClass="DarkHighlightedButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="300" y="0.0" width="150" height="86"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                        <state key="normal" title="3">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doTap3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qaw-02-IMD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1e-oh-rSR" customClass="DarkHighlightedButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="450" y="0.0" width="150" height="86"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="52"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doTapAddition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZpL-yg-70N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Thk-wr-3U1" customClass="DarkHighlightedButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="150" y="0.0" width="150" height="86"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                        <state key="normal" title="2">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doTap2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BWB-dI-LXz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afd-yC-319" customClass="DarkHighlightedButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="86"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                        <state key="normal" title="1">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doTap1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8WB-Gk-09H"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="vvu-Fe-5ce" firstAttribute="leading" secondItem="Thk-wr-3U1" secondAttribute="trailing" id="8vm-cv-qc8"/>
+                                    <constraint firstItem="vvu-Fe-5ce" firstAttribute="leading" secondItem="Thk-wr-3U1" secondAttribute="trailing" id="96t-BL-VaC"/>
+                                    <constraint firstItem="V1e-oh-rSR" firstAttribute="leading" secondItem="vvu-Fe-5ce" secondAttribute="trailing" id="DEb-U4-AMJ"/>
+                                    <constraint firstItem="afd-yC-319" firstAttribute="top" secondItem="OGU-T1-4jJ" secondAttribute="top" id="Fh6-Sh-TXs"/>
+                                    <constraint firstAttribute="bottom" secondItem="vvu-Fe-5ce" secondAttribute="bottom" id="HkY-Xb-kuh"/>
+                                    <constraint firstAttribute="bottom" secondItem="afd-yC-319" secondAttribute="bottom" id="Jn7-JV-LV1"/>
+                                    <constraint firstItem="V1e-oh-rSR" firstAttribute="leading" secondItem="vvu-Fe-5ce" secondAttribute="trailing" id="PsU-pZ-Fsf"/>
+                                    <constraint firstItem="Thk-wr-3U1" firstAttribute="leading" secondItem="afd-yC-319" secondAttribute="trailing" id="PvK-1b-VyJ"/>
+                                    <constraint firstItem="Thk-wr-3U1" firstAttribute="width" secondItem="afd-yC-319" secondAttribute="width" id="QFM-CW-8Vn"/>
+                                    <constraint firstItem="vvu-Fe-5ce" firstAttribute="top" secondItem="OGU-T1-4jJ" secondAttribute="top" id="asW-pH-R2G"/>
+                                    <constraint firstItem="Thk-wr-3U1" firstAttribute="top" secondItem="OGU-T1-4jJ" secondAttribute="top" id="brQ-Xv-fDT"/>
+                                    <constraint firstAttribute="trailing" secondItem="V1e-oh-rSR" secondAttribute="trailing" id="fOU-HG-rmn"/>
+                                    <constraint firstAttribute="bottom" secondItem="V1e-oh-rSR" secondAttribute="bottom" id="jEg-bk-JpW"/>
+                                    <constraint firstAttribute="bottom" secondItem="Thk-wr-3U1" secondAttribute="bottom" id="kay-dD-mPt"/>
+                                    <constraint firstItem="Thk-wr-3U1" firstAttribute="leading" secondItem="afd-yC-319" secondAttribute="trailing" id="oVD-Bp-ZF8"/>
+                                    <constraint firstItem="vvu-Fe-5ce" firstAttribute="width" secondItem="afd-yC-319" secondAttribute="width" id="pYt-PP-Qhn"/>
+                                    <constraint firstItem="afd-yC-319" firstAttribute="leading" secondItem="OGU-T1-4jJ" secondAttribute="leading" id="pnT-dM-eRg"/>
+                                    <constraint firstItem="V1e-oh-rSR" firstAttribute="top" secondItem="OGU-T1-4jJ" secondAttribute="top" id="qDy-LQ-sH3"/>
+                                    <constraint firstItem="V1e-oh-rSR" firstAttribute="width" secondItem="afd-yC-319" secondAttribute="width" id="tvz-6R-e8H"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OGU-T1-4jJ" firstAttribute="height" secondItem="aTV-ha-QZI" secondAttribute="height" multiplier="0.5" id="1Zl-fg-vWQ"/>
+                            <constraint firstItem="jxD-DN-lSh" firstAttribute="height" secondItem="aTV-ha-QZI" secondAttribute="height" multiplier="0.5" id="853-o5-aUA"/>
+                            <constraint firstItem="aTV-ha-QZI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8LS-lw-Kiy"/>
+                            <constraint firstItem="ABn-h0-6ya" firstAttribute="top" secondItem="7lc-1T-sXi" secondAttribute="bottom" id="99o-x2-aiz"/>
+                            <constraint firstItem="OGU-T1-4jJ" firstAttribute="top" secondItem="jxD-DN-lSh" secondAttribute="bottom" id="AUe-mm-1Xb"/>
+                            <constraint firstItem="jxD-DN-lSh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Bcg-O8-kqn"/>
+                            <constraint firstItem="Fdd-wY-PMl" firstAttribute="top" secondItem="OGU-T1-4jJ" secondAttribute="bottom" id="Br6-wI-rSn"/>
+                            <constraint firstItem="7lc-1T-sXi" firstAttribute="height" secondItem="aTV-ha-QZI" secondAttribute="height" multiplier="0.5" id="DId-k4-A2E"/>
+                            <constraint firstItem="ABn-h0-6ya" firstAttribute="top" secondItem="7lc-1T-sXi" secondAttribute="bottom" id="Ft3-DZ-myL"/>
+                            <constraint firstAttribute="trailing" secondItem="aTV-ha-QZI" secondAttribute="trailing" id="J9R-S1-rwJ"/>
+                            <constraint firstAttribute="trailing" secondItem="OGU-T1-4jJ" secondAttribute="trailing" id="Q4Z-PZ-Eo7"/>
+                            <constraint firstItem="7lc-1T-sXi" firstAttribute="top" secondItem="aTV-ha-QZI" secondAttribute="bottom" id="VUn-3R-fQO"/>
+                            <constraint firstItem="Fdd-wY-PMl" firstAttribute="height" secondItem="aTV-ha-QZI" secondAttribute="height" multiplier="0.5" id="X1l-jr-T7D"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fdd-wY-PMl" secondAttribute="bottom" id="Xzm-HG-rNG"/>
+                            <constraint firstItem="ABn-h0-6ya" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YNe-lQ-UjH"/>
+                            <constraint firstAttribute="trailing" secondItem="ABn-h0-6ya" secondAttribute="trailing" id="a0h-5D-EDM"/>
+                            <constraint firstItem="OGU-T1-4jJ" firstAttribute="top" secondItem="jxD-DN-lSh" secondAttribute="bottom" id="a6m-6v-mVV"/>
+                            <constraint firstItem="ABn-h0-6ya" firstAttribute="height" secondItem="aTV-ha-QZI" secondAttribute="height" multiplier="0.5" id="aZr-56-9D3"/>
+                            <constraint firstItem="OGU-T1-4jJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fUf-81-pFf"/>
+                            <constraint firstAttribute="trailing" secondItem="jxD-DN-lSh" secondAttribute="trailing" id="fjB-TE-lyo"/>
+                            <constraint firstItem="Fdd-wY-PMl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="huX-8w-Vn6"/>
+                            <constraint firstItem="aTV-ha-QZI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iMR-1d-Pv0"/>
+                            <constraint firstItem="Fdd-wY-PMl" firstAttribute="top" secondItem="OGU-T1-4jJ" secondAttribute="bottom" id="jNB-f3-99M"/>
+                            <constraint firstItem="jxD-DN-lSh" firstAttribute="top" secondItem="ABn-h0-6ya" secondAttribute="bottom" id="r3B-JK-bF0"/>
+                            <constraint firstAttribute="trailing" secondItem="7lc-1T-sXi" secondAttribute="trailing" id="vW7-mc-UJ9"/>
+                            <constraint firstAttribute="trailing" secondItem="Fdd-wY-PMl" secondAttribute="trailing" id="zOk-qv-VXO"/>
+                            <constraint firstItem="7lc-1T-sXi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zbW-MC-5bo"/>
+                            <constraint firstItem="jxD-DN-lSh" firstAttribute="top" secondItem="ABn-h0-6ya" secondAttribute="bottom" id="zgG-no-bHJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calculationLabel" destination="e5L-G8-KyT" id="Lu2-N8-a9i"/>
+                        <outlet property="calculationView" destination="aTV-ha-QZI" id="tH6-RN-1cs"/>
+                        <outlet property="clearButton" destination="xBK-Bc-wyV" id="JVM-mK-9ku"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="775" y="541"/>
+        </scene>
+    </scenes>
+</document>

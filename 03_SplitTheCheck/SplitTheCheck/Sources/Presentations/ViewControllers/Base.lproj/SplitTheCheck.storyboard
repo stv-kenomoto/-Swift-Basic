@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8wK-S2-0LR">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Split The Check View Controller-->
+        <scene sceneID="H1c-Kh-v3Q">
+            <objects>
+                <viewController id="8wK-S2-0LR" customClass="SplitTheCheckViewController" customModule="SplitTheCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SAj-0v-2NY"/>
+                        <viewControllerLayoutGuide type="bottom" id="LUh-m6-ncJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hKo-Ck-hz6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oHH-km-lRx">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="割り勘アプリ" id="Cv6-dC-OD0"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="価格" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rU1-8m-6pK">
+                                <rect key="frame" x="22" y="108" width="556" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="人数" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a1g-oq-wTM">
+                                <rect key="frame" x="22" y="182" width="556" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100円単位で切り上げ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TX5-dJ-kcB">
+                                <rect key="frame" x="22" y="256" width="165" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dme-xR-8Fo">
+                                <rect key="frame" x="22" y="300" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qa1-zw-hr9">
+                                <rect key="frame" x="22" y="526" width="267" height="30"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="割り勘する">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doTapSplitTheCheck:" destination="8wK-S2-0LR" eventType="touchUpInside" id="P3O-Yh-8UE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHu-5I-Dta">
+                                <rect key="frame" x="311" y="526" width="267" height="30"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="クリア">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doTapClear:" destination="8wK-S2-0LR" eventType="touchUpInside" id="RRo-1R-IcS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fE4-ef-CJR">
+                                <rect key="frame" x="22" y="300" width="556" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="oHH-km-lRx" firstAttribute="top" secondItem="SAj-0v-2NY" secondAttribute="bottom" id="2dL-61-dzu"/>
+                            <constraint firstItem="LUh-m6-ncJ" firstAttribute="top" secondItem="qa1-zw-hr9" secondAttribute="bottom" constant="44" id="4XW-Pt-A3H"/>
+                            <constraint firstItem="fE4-ef-CJR" firstAttribute="centerY" secondItem="hKo-Ck-hz6" secondAttribute="centerY" id="4op-xj-lgk"/>
+                            <constraint firstAttribute="trailing" secondItem="rU1-8m-6pK" secondAttribute="trailing" constant="22" id="8gp-oq-ms2"/>
+                            <constraint firstItem="LUh-m6-ncJ" firstAttribute="top" secondItem="FHu-5I-Dta" secondAttribute="bottom" constant="44" id="DHf-uw-sAS"/>
+                            <constraint firstItem="FHu-5I-Dta" firstAttribute="leading" secondItem="qa1-zw-hr9" secondAttribute="trailing" constant="22" id="FF8-p1-bws"/>
+                            <constraint firstItem="dme-xR-8Fo" firstAttribute="leading" secondItem="hKo-Ck-hz6" secondAttribute="leading" constant="22" id="POc-SZ-PBJ"/>
+                            <constraint firstItem="qa1-zw-hr9" firstAttribute="leading" secondItem="hKo-Ck-hz6" secondAttribute="leading" constant="22" id="SDh-68-q4U"/>
+                            <constraint firstAttribute="trailing" secondItem="a1g-oq-wTM" secondAttribute="trailing" constant="22" id="Ses-ol-Quv"/>
+                            <constraint firstItem="fE4-ef-CJR" firstAttribute="leading" secondItem="hKo-Ck-hz6" secondAttribute="leading" constant="22" id="XHn-72-1z6"/>
+                            <constraint firstItem="dme-xR-8Fo" firstAttribute="top" secondItem="fE4-ef-CJR" secondAttribute="bottom" id="XeX-Nu-Mzy"/>
+                            <constraint firstItem="TX5-dJ-kcB" firstAttribute="top" secondItem="a1g-oq-wTM" secondAttribute="bottom" constant="44" id="cC7-AM-YJd"/>
+                            <constraint firstItem="rU1-8m-6pK" firstAttribute="leading" secondItem="hKo-Ck-hz6" secondAttribute="leading" constant="22" id="chV-tI-IUi"/>
+                            <constraint firstAttribute="trailing" secondItem="FHu-5I-Dta" secondAttribute="trailing" constant="22" id="fV3-um-Oon"/>
+                            <constraint firstAttribute="trailing" secondItem="fE4-ef-CJR" secondAttribute="trailing" constant="22" id="im8-ny-JWL"/>
+                            <constraint firstItem="FHu-5I-Dta" firstAttribute="width" secondItem="qa1-zw-hr9" secondAttribute="width" id="lqD-9b-BfT"/>
+                            <constraint firstItem="TX5-dJ-kcB" firstAttribute="leading" secondItem="hKo-Ck-hz6" secondAttribute="leading" constant="22" id="nQA-gR-gNf"/>
+                            <constraint firstItem="a1g-oq-wTM" firstAttribute="top" secondItem="rU1-8m-6pK" secondAttribute="bottom" constant="44" id="p5x-NZ-id3"/>
+                            <constraint firstItem="oHH-km-lRx" firstAttribute="leading" secondItem="hKo-Ck-hz6" secondAttribute="leading" id="rO0-pr-H3f"/>
+                            <constraint firstItem="rU1-8m-6pK" firstAttribute="top" secondItem="oHH-km-lRx" secondAttribute="bottom" constant="44" id="v8a-QW-He0"/>
+                            <constraint firstAttribute="trailing" secondItem="oHH-km-lRx" secondAttribute="trailing" id="vtV-GJ-VeD"/>
+                            <constraint firstItem="a1g-oq-wTM" firstAttribute="leading" secondItem="hKo-Ck-hz6" secondAttribute="leading" constant="22" id="zpP-s7-O92"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="gfd-je-HGm" appends="YES" id="Lz1-W7-p0I"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="changeLabel" destination="dme-xR-8Fo" id="8sk-VX-Fak"/>
+                        <outlet property="numberOfPeopleTextField" destination="a1g-oq-wTM" id="XNd-Yp-mzl"/>
+                        <outlet property="pricePerPersonLabel" destination="fE4-ef-CJR" id="h4Y-8c-GHn"/>
+                        <outlet property="priceTextField" destination="rU1-8m-6pK" id="z4M-iA-0X6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z75-yw-Xgh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gfd-je-HGm">
+                    <connections>
+                        <action selector="hideKeyboard:" destination="8wK-S2-0LR" id="jZi-XX-RRm"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="604" y="428"/>
+        </scene>
+    </scenes>
+</document>

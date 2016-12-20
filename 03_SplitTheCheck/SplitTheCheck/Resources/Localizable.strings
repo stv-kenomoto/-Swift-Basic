@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  SplitTheCheck
+
+  Created by kokoki on 4/17/16.
+  Copyright © 2016 enomt. All rights reserved.
+*/
+
+"pricePerPerson" = "一人当たりの予算は、%@円です";
+"change" = "おつりは、%@円です";
